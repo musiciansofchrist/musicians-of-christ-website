@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musicians of Christ | Official Website</title>
+    <meta
+      name="description"
+      content="Musicians of Christ — an independent Christian artist and worship ministry spreading the Gospel through powerful Spirit-led music."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy-900: #07161d;
+        --navy-800: #0d1d2a;
+        --navy-700: #112b3b;
+        --charcoal: #1b2a33;
+        --slate: #334a5d;
+        --soft-slate: #dfe7ee;
+        --gold: #d4af6d;
+        --gold-soft: #f2d89d;
+        --teal: #38b8b8;
+        --teal-deep: #1e8c9a;
+        --white: #ffffff;
+        --shadow: 0 20px 45px rgba(5, 15, 22, 0.22);
+        --max-width: 1200px;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(180deg, #f7f9fb 0%, #edf2f6 100%);
+        color: var(--charcoal);
+        line-height: 1.7;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      p { color: rgba(17, 43, 59, 0.82); }
+      .container { width: min(var(--max-width), calc(100% - 32px)); margin: 0 auto; }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(7, 22, 29, 0.86);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(212, 175, 109, 0.2);
+      }
+
+      .nav-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--white);
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--gold), var(--teal));
+        color: var(--navy-900);
+        font-weight: 900;
+        box-shadow: 0 12px 18px rgba(56, 184, 184, 0.3);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links a {
+        position: relative;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), var(--teal));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .hero {
+        background:
+          linear-gradient(rgba(7, 22, 29, 0.45), rgba(7, 22, 29, 0.55)),
+          url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+        min-height: 760px;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 40px;
+        align-items: center;
+        padding: 80px 0 90px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: rgba(212, 175, 109, 0.16);
+        border: 1px solid rgba(212, 175, 109, 0.35);
+        color: var(--gold-soft);
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+      }
+
+      h1, h2, h3, h4 { font-family: "Montserrat", sans-serif; line-height: 1.08; }
+      .hero h1 {
+        font-size: clamp(2.8rem, 6vw, 6rem);
+        line-height: 0.97;
+        letter-spacing: -0.05em;
+        margin-bottom: 18px;
+        color: var(--white);
+      }
+
+      .hero-subtitle {
+        font-size: 1.15rem;
+        max-width: 620px;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 32px;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 16px 28px;
+        border: 1px solid transparent;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--gold), #f7dba7);
+        color: var(--navy-900);
+        box-shadow: 0 18px 35px rgba(212, 175, 109, 0.35);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.35);
+        color: var(--white);
+      }
+
+      .hero-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 26px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+      }
+
+      .mini-stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .mini-stat:last-child { border-bottom: none; }
+      .mini-stat strong {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.1rem;
+        font-weight: 800;
+        color: var(--gold-soft);
+      }
+      .mini-stat span {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      main section { padding: 110px 0; }
+      .section-tag {
+        color: var(--teal-deep);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 26px;
+        margin-bottom: 48px;
+      }
+
+      .section-header h2 {
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        letter-spacing: -0.05em;
+      }
+
+      .section-header p { max-width: 600px; }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 42px;
+        align-items: center;
+      }
+
+      .about-copy {
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(17, 43, 59, 0.06);
+        border-radius: 28px;
+        padding: 36px 30px;
+        box-shadow: 0 18px 30px rgba(11, 29, 41, 0.06);
+      }
+
+      .about-copy p + p { margin-top: 20px; }
+      .about-photo {
+        min-height: 520px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+      }
+
+      .founder-section {
+        background: linear-gradient(180deg, #0d1d2a 0%, #111f2d 100%);
+        color: var(--white);
+      }
+
+      .founder-wrap {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .founder-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(212, 175, 109, 0.18);
+        border-radius: 28px;
+        padding: 28px;
+        text-align: center;
+      }
+
+      .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 22px;
+        border-radius: 50%;
+        background: url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80") center/cover no-repeat;
+        border: 4px solid rgba(212, 175, 109, 0.6);
+        box-shadow: 0 18px 44px rgba(4, 16, 24, 0.35);
+      }
+
+      .founder-name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+        color: var(--white);
+      }
+
+      .founder-role {
+        color: var(--gold-soft);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .founder-bio { color: rgba(255, 255, 255, 0.76); }
+      .discography-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .album-card {
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(17, 43, 59, 0.06);
+        border-radius: 26px;
+        overflow: hidden;
+        box-shadow: 0 18px 35px rgba(11, 29, 41, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .album-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 26px 48px rgba(11, 29, 41, 0.12);
+      }
+
+      .album-art {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        flex-shrink: 0;
+      }
+
+      .album-info { 
+        padding: 20px 18px 24px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .album-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .album-meta {
+        color: rgba(17, 43, 59, 0.7);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .album-description {
+        color: rgba(17, 43, 59, 0.8);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .track-vibe {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--teal-deep);
+        font-weight: 700;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(17, 43, 59, 0.1);
+      }
+
+      .streaming-row {
+        margin-top: 42px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .stream-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 180px;
+        border-radius: 999px;
+        border: 1px solid rgba(17, 43, 59, 0.12);
+        background: var(--white);
+        color: var(--navy-900);
+        padding: 14px 22px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 800;
+        box-shadow: 0 12px 26px rgba(10, 30, 38, 0.06);
+      }
+
+      .stream-btn:hover,
+      .stream-btn:focus-visible {
+        background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+        color: var(--white);
+        border-color: transparent;
+        transform: translateY(-2px);
+      }
+
+      .licensing {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(223, 231, 238, 0.8));
+      }
+
+      .licensing-box {
+        max-width: 960px;
+        margin: 0 auto;
+        background: rgba(17, 43, 59, 0.98);
+        border-radius: 30px;
+        padding: 48px 42px;
+        color: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .licensing-box h3 {
+        color: var(--white);
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        letter-spacing: -0.05em;
+        margin-bottom: 18px;
+      }
+
+      .licensing-box p {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.06rem;
+        margin-bottom: 18px;
+      }
+
+      .licensing-box .btn { margin-top: 28px; }
+
+      .track-moods {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(212, 175, 109, 0.15);
+        border-radius: 20px;
+        padding: 28px;
+        margin-top: 32px;
+      }
+
+      .track-moods h4 {
+        color: var(--white);
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      .mood-item {
+        display: grid;
+        grid-template-columns: 1.2fr 1.8fr;
+        gap: 16px;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .mood-item:last-child {
+        border-bottom: none;
+      }
+
+      .mood-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: var(--gold-soft);
+      }
+
+      .mood-desc {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+      }
+
+      .licensing-details {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(212, 175, 109, 0.15);
+        border-radius: 20px;
+        padding: 28px;
+        margin-top: 32px;
+      }
+
+      .licensing-details h4 {
+        color: var(--white);
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      .licensing-details p {
+        color: rgba(255, 255, 255, 0.72);
+        margin-bottom: 16px;
+      }
+
+      .email-info {
+        background: rgba(212, 175, 109, 0.12);
+        border-left: 4px solid var(--gold);
+        padding: 16px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .email-info a {
+        color: var(--gold-soft);
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .checklist {
+        list-style: none;
+        margin-top: 16px;
+      }
+
+      .checklist li {
+        color: rgba(255, 255, 255, 0.7);
+        padding: 10px 0;
+        padding-left: 28px;
+        position: relative;
+      }
+
+      .checklist li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--gold-soft);
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
+
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+      }
+
+      .contact-form,
+      .contact-card {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(17, 43, 59, 0.08);
+        border-radius: 28px;
+        box-shadow: 0 18px 30px rgba(11, 29, 41, 0.06);
+      }
+
+      .contact-form { padding: 30px; }
+      form { display: grid; gap: 20px; }
+      .field { display: grid; gap: 10px; }
+
+      label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--navy-700);
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 16px 18px;
+        border: 1px solid rgba(17, 43, 59, 0.12);
+        border-radius: 16px;
+        background: #f8fafb;
+        color: var(--navy-900);
+        font: inherit;
+      }
+
+      input:focus, textarea:focus {
+        outline: none;
+        border-color: rgba(56, 184, 184, 0.8);
+        box-shadow: 0 0 0 4px rgba(56, 184, 184, 0.12);
+      }
+
+      textarea {
+        min-height: 170px;
+        resize: vertical;
+      }
+
+      .contact-card { padding: 30px; }
+      .contact-list { display: grid; gap: 18px; margin-top: 22px; }
+      .contact-item { display: grid; gap: 6px; }
+      .contact-label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        color: var(--teal-deep);
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .contact-item a, .contact-item span { color: var(--navy-900); font-size: 1.05rem; }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 118px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        background: rgba(17, 43, 59, 0.04);
+        border: 1px solid rgba(17, 43, 59, 0.08);
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.74rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .site-footer {
+        background: #07161d;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 26px 0;
+      }
+
+      .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .footer-wrap span { font-size: 0.88rem; }
+
+      @media (max-width: 980px) {
+        .hero-inner,
+        .about-grid,
+        .founder-wrap,
+        .contact-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header { align-items: flex-start; flex-direction: column; }
+        .discography-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .mood-item { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 720px) {
+        .nav-wrap {
+          min-height: 72px;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 16px 0;
+          gap: 14px;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 14px 22px;
+        }
+
+        .hero { min-height: 650px; }
+        .hero-inner { padding-top: 50px; }
+        .discography-grid { grid-template-columns: 1fr; }
+        .stream-btn { width: 100%; }
+        .licensing-box { padding: 32px 24px; }
+        .btn { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="Musicians of Christ home">
+          <span class="brand-mark">M</span>
+          <span>Musicians of Christ</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#founder">Founder</a>
+          <a href="#discography">Discography</a>
+          <a href="#licensing">Licensing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Hero section">
+        <div class="container hero-inner">
+          <div>
+            <span class="eyebrow">Faith. Music. Movement.</span>
+            <h1>Soundtracks for a deeper worship.</h1>
+            <p class="hero-subtitle">
+              Musicians of Christ is an independent Christian artist and worship ministry devoted to sharing the Gospel through Spirit-led music that inspires worship, transformation, and hope.
+            </p>
+            <div class="hero-actions">
+              <a href="#discography" class="btn btn-primary">Listen Now</a>
+              <a href="#contact" class="btn btn-secondary">Book a Session</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Group statistics">
+            <div class="mini-stat">
+              <div>
+                <strong>3</strong>
+                <span>Albums</span>
+              </div>
+              <div>
+                <strong>1</strong>
+                <span>Anthem Single</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <div>
+                <strong>2020</strong>
+                <span>Founded</span>
+              </div>
+              <div>
+                <strong>∞</strong>
+                <span>Impact</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <div>
+                <strong>Gospel</strong>
+                <span>Sound</span>
+              </div>
+              <div>
+                <strong>Hope</strong>
+                <span>Mission</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-tag">About</div>
+              <h2>About Musicians of Christ</h2>
+            </div>
+            <p>
+              Musicians of Christ is an independent Christian artist/band dedicated to spreading the Gospel through powerful, Spirit-led music.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy">
+              <p>
+                Musicians of Christ is an independent Christian artist/band dedicated to spreading the Gospel through powerful, Spirit-led music. Founded and led by visionary artist Jena Alvin, the ministry has been operating independently under the Jena Alvin Label since 2020.
+              </p>
+              <p>
+                Their unique sound is a rich tapestry of faith, featuring a dedicated group of highly talented musicians who play behind Jena to create an authentic, immersive worship experience. Every song they produce is crafted to touch hearts, renew spirits, and usher listeners into the presence of God.
+              </p>
+              <p>
+                Driven by a divine calling, they believe in using their God-given musical talents to uplift heavy souls, deliver messages of hope to the brokenhearted, and ultimately bring listeners into a closer, more intimate relationship with Jesus Christ.
+              </p>
+            </div>
+
+            <div class="about-photo" aria-label="Group photo placeholder"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="founder" class="founder-section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-tag" style="color: var(--gold-soft);">Founder</div>
+              <h2 style="color: var(--white);">Meet the Founder</h2>
+            </div>
+            <p style="color: rgba(255,255,255,0.7);">
+              A creative leader fully devoted to using music as a vehicle for worship, deliverance, and spiritual breakthrough.
+            </p>
+          </div>
+
+          <div class="founder-wrap">
+            <div class="founder-card">
+              <div class="profile-photo" aria-label="Founder profile placeholder"></div>
+              <div class="founder-name">Jena Alvin</div>
+              <div class="founder-role">Founder, Leader &amp; Creative Force</div>
+            </div>
+
+            <div class="founder-bio">
+              <p>
+                Jena Alvin is the visionary founder, leader, and driving creative force behind Musicians of Christ. Operating under the Jena Alvin Label since 2020, Jena is a multi-talented independent artist, performer, songwriter, composer, and keyboardist.
+              </p>
+              <p>
+                Her dynamic ministry breaks traditional boundaries by blending soulful singing with powerful, faith-filled rapping and worship songs, delivering the Gospel message with modern energy and deep conviction. Backed by a dedicated group of skilled musicians, Jena pours her heart into arranging and crafting music that completely honors God.
+              </p>
+              <p>
+                Her unwavering commitment to faith and creative excellence fuels her divine calling to uplift heavy hearts and share Christ's transformative love through song.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="discography">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-tag">Discography</div>
+              <h2>Latest Releases</h2>
+            </div>
+            <p>
+              A catalog of worship-focused music designed to touch hearts, renew spirits, and draw listeners closer to Jesus Christ.
+            </p>
+          </div>
+
+          <div class="discography-grid" aria-label="Discography list">
+            <article class="album-card">
+              <div class="album-art" style="background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="album-info">
+                <div class="album-title">I Gotta Praise</div>
+                <div class="album-meta">Album</div>
+                <div class="album-description">A high-energy, vibrant celebration of gratitude and faith. Blends joyful rhythms with uplifting praise anthems designed to shift your atmosphere and get you moving in thanksgiving.</div>
+                <div class="track-vibe">Vibe: High-energy praise, uplifting, rhythmic, celebratory</div>
+              </div>
+            </article>
+
+            <article class="album-card">
+              <div class="album-art" style="background-image: url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="album-info">
+                <div class="album-title">The Lord's Deliverance</div>
+                <div class="album-meta">Album</div>
+                <div class="album-description">A powerful, triumphant collection of songs focused on victory, healing, and breaking chains. Delivers a bold message of hope and strength for anyone walking through a season of trial.</div>
+                <div class="track-vibe">Vibe: Powerful, triumphant, dramatic crescendos, inspiring</div>
+              </div>
+            </article>
+
+            <article class="album-card">
+              <div class="album-art" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="album-info">
+                <div class="album-title">The Lord Is My Light And Salvation</div>
+                <div class="album-meta">Album</div>
+                <div class="album-description">A deep, cinematic, and reflective worship album based on scriptural truths. Offers a comforting, atmospheric soundscape perfect for intimate prayer, meditation, and finding peace.</div>
+                <div class="track-vibe">Vibe: Reflective, cinematic, soulful worship, hopeful</div>
+              </div>
+            </article>
+
+            <article class="album-card">
+              <div class="album-art" style="background-image: url('https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="album-info">
+                <div class="album-title">Let Everything That Has Breath</div>
+                <div class="album-meta">Anthem Single</div>
+                <div class="album-description">A vibrant anthem focused on praising God with every form of expression. High-energy single is a universal call to hold nothing back and use every gift to give Him glory.</div>
+                <div class="track-vibe">Vibe: Bold, anthemic, driving praise, energetic</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="streaming-row" aria-label="Streaming platform links">
+            <a href="https://youtube.com/@musiciansofchrist?si=oDst-NzItbhVSc8Y" class="stream-btn" target="_blank" rel="noreferrer">YouTube Music</a>
+            <a href="https://open.spotify.com/artist/0jw9zE0t7ainHF25Cd4cJQ?si=vU6ICU8NQmC7GLUNqmNKFw" class="stream-btn" target="_blank" rel="noreferrer">Spotify</a>
+            <a href="https://music.apple.com/us/artist/musicians-of-christ/1533139502" class="stream-btn" target="_blank" rel="noreferrer">Apple Music</a>
+            <a href="https://music.amazon.com/artists/B08JYG55LZ/musicians-of-christ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Pa6mTkVMwK7mzwskVo2yd2DQK" class="stream-btn" target="_blank" rel="noreferrer">Amazon Music</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="licensing" class="licensing">
+        <div class="container">
+          <div class="licensing-box">
+            <div class="section-tag" style="color: var(--gold-soft);">Sync &amp; Licensing</div>
+            <h3>High-Quality Christian Music for Your Project</h3>
+            <p>
+              Are you looking for inspiring, high-quality Christian music for your next commercial, film, documentary, or media project? The Musicians of Christ catalog is 100% pre-cleared, independently owned (Master &amp; Publishing), and ready for immediate sync licensing.
+            </p>
+            <p>
+              We offer full vocal mixes as well as instrumental tracks to perfectly match your creative vision.
+            </p>
+
+            <div class="track-moods">
+              <h4>Track Moods &amp; Availability</h4>
+              <div class="mood-item">
+                <div class="mood-title">I Gotta Praise</div>
+                <div class="mood-desc">High-energy praise, uplifting, rhythmic, celebratory</div>
+              </div>
+              <div class="mood-item">
+                <div class="mood-title">The Lord's Deliverance</div>
+                <div class="mood-desc">Powerful, triumphant, dramatic crescendos, inspiring</div>
+              </div>
+              <div class="mood-item">
+                <div class="mood-title">The Lord is My Light And Salvation</div>
+                <div class="mood-desc">Reflective, cinematic, soulful worship, hopeful</div>
+              </div>
+              <div class="mood-item">
+                <div class="mood-title">Let Everything That Has Breath</div>
+                <div class="mood-desc">Bold, anthemic, driving praise, energetic</div>
+              </div>
+            </div>
+
+            <div class="licensing-details">
+              <h4>Flexible Licensing Options</h4>
+              <p>
+                We understand production budgets vary. We offer "One-Stop" Hybrid Licensing tailored to your project:
+              </p>
+              <ul class="checklist">
+                <li><strong>For indie films &amp; documentaries:</strong> Lower upfront sync fees paired with guaranteed backend cue-sheet registration</li>
+                <li><strong>For commercial advertising:</strong> Standard flat-rate master and publishing buyouts</li>
+                <li><strong>For all projects:</strong> Fast turnaround and professional support from start to finish</li>
+              </ul>
+
+              <div class="email-info">
+                <p><strong>Ready to license our music?</strong></p>
+                <p>Email us at <a href="mailto:musiciansofchrist@yahoo.com">musiciansofchrist@yahoo.com</a> with your project details to receive a prompt quote.</p>
+              </div>
+
+              <h4 style="margin-top: 24px;">What to Include in Your Email</h4>
+              <ul class="checklist">
+                <li><strong>Project Type:</strong> Commercial, Indie Film, Documentary, Social Media Promo, etc.</li>
+                <li><strong>Track Title(s):</strong> The specific song or instrumental you want to license</li>
+                <li><strong>Usage / Territory:</strong> Worldwide Web, Regional TV, Film Festivals, etc.</li>
+                <li><strong>Project Budget:</strong> Your estimated budget for music licensing</li>
+              </ul>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">Start Your Inquiry</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-tag">Contact</div>
+              <h2>Get in Touch</h2>
+            </div>
+            <p>
+              For bookings, collaborations, licensing inquiries, and general questions, we'd love to hear from you.
+            </p>
+          </div>
+
+          <div class="contact-wrap">
+            <div class="contact-form">
+              <form>
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" name="name" placeholder="Your name" />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" name="email" placeholder="you@example.com" />
+                </div>
+
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Tell us how we can help..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+
+            <aside class="contact-card" aria-label="Contact details">
+              <div class="section-tag" style="margin-bottom: 10px;">Reach Us</div>
+              <h3 style="font-size: 2rem; letter-spacing: -0.05em; margin-bottom: 10px;">Let's connect.</h3>
+
+              <div class="contact-list">
+                <div class="contact-item">
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:musiciansofchrist@yahoo.com">musiciansofchrist@yahoo.com</a>
+                </div>
+
+                <div class="contact-item">
+                  <span class="contact-label">Spotify</span>
+                  <a href="https://open.spotify.com/artist/0jw9zE0t7ainHF25Cd4cJQ?si=vU6ICU8NQmC7GLUNqmNKFw" target="_blank" rel="noreferrer">Spotify Artist Page</a>
+                </div>
+
+                <div class="contact-item">
+                  <span class="contact-label">YouTube</span>
+                  <a href="https://youtube.com/@musiciansofchrist?si=oDst-NzItbhVSc8Y" target="_blank" rel="noreferrer">@musiciansofchrist</a>
+                </div>
+
+                <div class="contact-item">
+                  <span class="contact-label">Apple Music</span>
+                  <a href="https://music.apple.com/us/artist/musicians-of-christ/1533139502" target="_blank" rel="noreferrer">Apple Music</a>
+                </div>
+
+                <div class="contact-item">
+                  <span class="contact-label">Amazon Music</span>
+                  <a href="https://music.amazon.com/artists/B08JYG55LZ/musicians-of-christ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Pa6mTkVMwK7mzwskVo2yd2DQK" target="_blank" rel="noreferrer">Amazon Music</a>
+                </div>
+              </div>
+
+              <div class="social-links" aria-label="Social media links">
+                <a href="https://open.spotify.com/artist/0jw9zE0t7ainHF25Cd4cJQ?si=vU6ICU8NQmC7GLUNqmNKFw" class="social-link" target="_blank" rel="noreferrer">Spotify</a>
+                <a href="https://youtube.com/@musiciansofchrist?si=oDst-NzItbhVSc8Y" class="social-link" target="_blank" rel="noreferrer">YouTube</a>
+                <a href="https://music.apple.com/us/artist/musicians-of-christ/1533139502" class="social-link" target="_blank" rel="noreferrer">Apple</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <span>© 2025 Musicians of Christ</span>
+        <span>Faith-driven music for every story.</span>
+      </div>
+    </footer>
+  </body>
+</html>
