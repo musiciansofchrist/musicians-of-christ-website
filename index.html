@@ -38,6 +38,9 @@
         background: linear-gradient(180deg, #f7f9fb 0%, #edf4f7 100%);
         color: var(--charcoal);
         line-height: 1.75;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
 
       img { display: block; max-width: 100%; }
@@ -262,6 +265,9 @@
         margin-top: 8px;
       }
 
+      main {
+        flex: 1;
+      }
       main section { padding: 108px 0; }
       .section-header {
         display: flex;
@@ -632,8 +638,9 @@
 
       .site-footer {
         background: #07161d;
-        color: rgba(255,255,255,0.82);
+        color: #ffffff;
         padding: 24px 0;
+        margin-top: auto;
       }
       .footer-wrap {
         display: flex;
@@ -642,7 +649,10 @@
         gap: 20px;
         flex-wrap: wrap;
       }
-      .footer-wrap span { font-size: 0.85rem; }
+      .footer-wrap span {
+        font-size: 0.85rem;
+        color: #ffffff;
+      }
 
       @media (max-width: 980px) {
         .hero-inner,
@@ -875,7 +885,7 @@
                 <div class="album-title">Let Everything That Has Breath</div>
                 <div class="album-meta">Single</div>
                 <div class="album-description">A dynamic anthem calling the whole body to worship God with every gift, every voice, and every expression of praise.</div>
-                <div class="track-vibe">Vibe: Bold, anthmic, driving praise, energetic</div>
+                <div class="track-vibe">Vibe: Bold, anthemic, driving praise, energetic</div>
               </div>
             </article>
           </div>
