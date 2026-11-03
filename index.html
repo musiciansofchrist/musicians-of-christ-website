@@ -8,6 +8,8 @@
       name="description"
       content="Musicians of Christ — a faith-driven Christian music ministry creating powerful worship and Gospel-inspired music."
     />
+    <link rel="icon" type="image/png" href="MUSICIANS OF CHRIST (5).png" />
+    <link rel="shortcut icon" type="image/png" href="MUSICIANS OF CHRIST (5).png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -265,9 +267,7 @@
         margin-top: 8px;
       }
 
-      main {
-        flex: 1;
-      }
+      main { flex: 1; }
       main section { padding: 108px 0; }
       .section-header {
         display: flex;
@@ -319,24 +319,24 @@
         object-fit: cover;
       }
 
-      .founder-section {
+      .artist-section {
         background: linear-gradient(180deg, #0e1f2b 0%, #111d2b 100%);
         color: var(--white);
       }
-      .founder-wrap {
+      .artist-wrap {
         display: grid;
         grid-template-columns: 0.75fr 1.25fr;
         gap: 40px;
         align-items: flex-start;
       }
-      .founder-card {
+      .artist-card {
         background: rgba(255,255,255,0.04);
         border: 1px solid rgba(211,168,95,0.18);
         border-radius: 30px;
         padding: 28px 20px;
         text-align: center;
       }
-      .founder-photo {
+      .artist-photo {
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -345,18 +345,18 @@
         border: 4px solid rgba(211,168,95,0.7);
         box-shadow: 0 18px 38px rgba(0,0,0,0.2);
       }
-      .founder-photo img {
+      .artist-photo img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      .founder-name {
+      .artist-name {
         font-family: "Montserrat", sans-serif;
         font-size: 1.8rem;
         font-weight: 800;
         color: var(--white);
       }
-      .founder-role {
+      .artist-role {
         font-size: 0.72rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
@@ -364,7 +364,7 @@
         font-weight: 800;
         margin-top: 8px;
       }
-      .founder-bio {
+      .artist-bio {
         color: #ffffff;
         font-size: 1.01rem;
         background: rgba(255,255,255,0.06);
@@ -372,12 +372,31 @@
         border-radius: 24px;
         padding: 32px;
       }
-      .founder-bio p {
+      .artist-bio p {
         max-width: 760px;
         color: #ffffff;
         line-height: 1.8;
       }
-      .founder-bio p + p { margin-top: 18px; }
+      .artist-bio p + p { margin-top: 18px; }
+
+      .artist-gallery {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .artist-gallery-item {
+        border-radius: 22px;
+        overflow: hidden;
+        border: 1px solid rgba(211,168,95,0.2);
+        background: rgba(255,255,255,0.04);
+        box-shadow: 0 18px 30px rgba(0,0,0,0.12);
+      }
+      .artist-gallery-item img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
 
       .discography-grid {
         display: grid;
@@ -657,13 +676,14 @@
       @media (max-width: 980px) {
         .hero-inner,
         .about-grid,
-        .founder-wrap,
+        .artist-wrap,
         .contact-wrap {
           grid-template-columns: 1fr;
         }
         .section-header { align-items: flex-start; flex-direction: column; }
         .discography-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .mood-item { grid-template-columns: 1fr; }
+        .artist-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
 
       @media (max-width: 720px) {
@@ -679,7 +699,7 @@
         .brand-name { font-size: 0.68rem; }
         .hero { min-height: 660px; }
         .hero-inner { padding-top: 56px; }
-        .discography-grid { grid-template-columns: 1fr; }
+        .discography-grid, .artist-gallery { grid-template-columns: 1fr; }
         .stream-btn { width: 100%; }
         .licensing-box { padding: 32px 24px; }
         .btn { width: 100%; }
@@ -697,7 +717,7 @@
         </a>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#founder">Founder</a>
+          <a href="#artist">Artist</a>
           <a href="#discography">Discography</a>
           <a href="#licensing">Licensing</a>
           <a href="#contact">Contact</a>
@@ -792,37 +812,52 @@
         </div>
       </section>
 
-      <section id="founder" class="founder-section">
+      <section id="artist" class="artist-section">
         <div class="container">
           <div class="section-header">
             <div>
-              <div class="section-tag" style="color: var(--gold-soft);">Founder</div>
-              <h2 style="color: var(--white);">Meet the Founder</h2>
+              <div class="section-tag" style="color: var(--gold-soft);">Artist</div>
+              <h2 style="color: var(--white);">Meet the Artist</h2>
             </div>
             <p style="color: rgba(255,255,255,0.84);">
-              A creative leader devoted to using music as a vessel for worship, deliverance, and spiritual breakthrough.
+              Musicians of Christ is her stage name and artist identity — a creative expression of her faith, voice, and ministry.
             </p>
           </div>
 
-          <div class="founder-wrap">
-            <div class="founder-card">
-              <div class="founder-photo">
-                <img src="MUSICIANS OF CHRIST.png" alt="Jena Alvin founder portrait" />
+          <div class="artist-wrap">
+            <div class="artist-card">
+              <div class="artist-photo">
+                <img src="MUSICIANS OF CHRIST.png" alt="Jena Alvin portrait" />
               </div>
-              <div class="founder-name">Jena Alvin</div>
-              <div class="founder-role">Founder, Leader &amp; Creative Force</div>
+              <div class="artist-name">Jena Alvin</div>
+              <div class="artist-role">Artist • Leader • Creative Force</div>
             </div>
 
-            <div class="founder-bio">
+            <div class="artist-bio">
               <p>
-                Jena Alvin is the visionary founder, leader, and driving creative force behind Musicians of Christ. Operating under the Jena Alvin Label since 2020, Jena is a multi-talented independent artist, performer, songwriter, composer, and keyboardist.
+                Jena Alvin is the visionary artist, leader, and driving creative force behind Musicians of Christ. Musicians of Christ is her stage name and artist name, a ministry identity that reflects her calling, creativity, and passion for worship.
               </p>
               <p>
-                Her dynamic ministry breaks traditional boundaries by blending soulful singing with powerful, faith-filled rapping and worship songs, delivering the Gospel message with modern energy and deep conviction. Backed by a dedicated group of skilled musicians, Jena pours her heart into arranging and crafting music that completely honors God.
+                Her dynamic ministry breaks traditional boundaries by blending soulful singing with powerful, faith-filled rap and worship songs, delivering the Gospel message with modern energy and deep conviction. Behind the name is a woman committed to ministry, expression, and creative excellence.
               </p>
               <p>
-                Her unwavering commitment to faith and creative excellence fuels her divine calling to uplift heavy hearts and share Christ's transformative love through song.
+                Her unwavering commitment to faith and creative excellence fuels her divine calling to uplift heavy hearts and share Christ's transformative love through music.
               </p>
+            </div>
+          </div>
+
+          <div class="artist-gallery" aria-label="Artist images">
+            <div class="artist-gallery-item">
+              <img src="MUSICIANS OF CHRIST.png" alt="Musicians of Christ portrait" />
+            </div>
+            <div class="artist-gallery-item">
+              <img src="TM.png" alt="TM portrait" />
+            </div>
+            <div class="artist-gallery-item">
+              <img src="TM (1).png" alt="TM detail image 1" />
+            </div>
+            <div class="artist-gallery-item">
+              <img src="TM (2).png" alt="TM detail image 2" />
             </div>
           </div>
         </div>
@@ -998,7 +1033,7 @@
 
             <aside class="contact-card" aria-label="Contact details">
               <div class="section-tag" style="margin-bottom: 10px;">Reach Us</div>
-              <h3 style="font-size: 2rem; letter-spacing: -0.05em; margin-bottom: 10px;">Let's connect.</h3>
+              <h3 style="font-size: 2rem; letter-spacing: -0.05em; margin-bottom: 10px;">Let’s connect.</h3>
 
               <div class="contact-list">
                 <div class="contact-item">
@@ -1017,22 +1052,6 @@
                   <span class="contact-label">Instagram</span>
                   <a href="https://www.instagram.com/musiciansofchrist_/" target="_blank" rel="noreferrer">@musiciansofchrist_</a>
                 </div>
-                <div class="contact-item">
-                  <span class="contact-label">Facebook</span>
-                  <a href="https://www.facebook.com/share/1P9xunk7Rc/" target="_blank" rel="noreferrer">Musicians of Christ</a>
-                </div>
-                <div class="contact-item">
-                  <span class="contact-label">LinkedIn</span>
-                  <a href="https://www.linkedin.com/company/musicians-of-christ/about/?viewAsMember=true" target="_blank" rel="noreferrer">Musicians of Christ</a>
-                </div>
-                <div class="contact-item">
-                  <span class="contact-label">TikTok</span>
-                  <a href="https://www.tiktok.com/@musiciansofchrist?_r=1&_t=ZPL-97R0mZYLt4p" target="_blank" rel="noreferrer">@musiciansofchrist</a>
-                </div>
-                <div class="contact-item">
-                  <span class="contact-label">Apple Music</span>
-                  <a href="https://music.apple.com/us/artist/musicians-of-christ/1533139502" target="_blank" rel="noreferrer">Apple Music</a>
-                </div>
               </div>
 
               <div class="social-links" aria-label="Social media links">
@@ -1040,7 +1059,6 @@
                 <a href="https://youtube.com/@musiciansofchrist?si=_sD5IPR_n23OqHjh" class="social-link" target="_blank" rel="noreferrer">YouTube</a>
                 <a href="https://www.instagram.com/musiciansofchrist_/" class="social-link" target="_blank" rel="noreferrer">Instagram</a>
                 <a href="https://www.tiktok.com/@musiciansofchrist?_r=1&_t=ZPL-97R0mZYLt4p" class="social-link" target="_blank" rel="noreferrer">TikTok</a>
-                <a href="https://www.linkedin.com/company/musicians-of-christ/about/?viewAsMember=true" class="social-link" target="_blank" rel="noreferrer">LinkedIn</a>
               </div>
             </aside>
           </div>
