@@ -11,28 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --ink: #241d19;
-        --brown: #3a2a22;
-        --clay: #9c4e35;
-        --rust: #bd6946;
-        --gold: #d7ad68;
-        --cream: #f5efe4;
-        --paper: #fcf9f2;
-        --sage: #78816a;
-        --muted: #71685e;
-        --line: rgba(58, 42, 34, .18);
-        --serif: "Playfair Display", Georgia, serif;
-        --sans: "DM Sans", Arial, sans-serif;
+        --ink: #241d19; --brown: #3a2a22; --clay: #9c4e35; --rust: #bd6946;
+        --gold: #d7ad68; --cream: #f5efe4; --paper: #fcf9f2; --sage: #78816a;
+        --muted: #71685e; --line: rgba(58, 42, 34, .18);
+        --serif: "Playfair Display", Georgia, serif; --sans: "DM Sans", Arial, sans-serif;
       }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        color: var(--ink);
-        background: var(--paper);
-        font-family: var(--sans);
-        line-height: 1.7;
-      }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.7; }
       img { display: block; max-width: 100%; }
       a { color: inherit; text-decoration: none; }
       .wrap { width: min(1160px, calc(100% - 44px)); margin: 0 auto; }
@@ -44,10 +30,7 @@
       nav { display: flex; gap: 28px; flex-wrap: wrap; }
       nav a { color: var(--brown); font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
       nav a:hover, nav a:focus-visible { color: var(--clay); }
-      .hero {
-        position: relative; overflow: hidden; min-height: 610px; display: grid; align-items: center;
-        color: var(--paper); background: var(--brown);
-      }
+      .hero { position: relative; overflow: hidden; min-height: 610px; display: grid; align-items: center; color: var(--paper); background: var(--brown); }
       .hero::before, .hero::after { content: ""; position: absolute; border: 1px solid rgba(215,173,104,.34); border-radius: 50%; pointer-events: none; }
       .hero::before { width: 510px; height: 510px; right: -110px; top: -170px; }
       .hero::after { width: 350px; height: 350px; right: -30px; top: -90px; }
@@ -59,8 +42,8 @@
       .hero-image { position: relative; min-height: 410px; border-radius: 48% 48% 8px 8px; overflow: hidden; background: #5c4538; box-shadow: 18px 18px 0 rgba(215,173,104,.16); }
       .hero-image img { width: 100%; height: 100%; min-height: 410px; object-fit: cover; }
       .hero-image::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.42); border-radius: 48% 48% 5px 5px; pointer-events: none; }
-      .button { display: inline-flex; align-items: center; justify-content: center; margin-top: 30px; padding: 13px 22px; color: var(--ink); background: var(--gold); border-radius: 2px; font-size: .73rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-      .button:hover, .button:focus-visible { background: #e6c987; }
+      .button { display: inline-flex; align-items: center; justify-content: center; margin-top: 30px; padding: 13px 22px; color: var(--ink); background: var(--gold); border: 0; border-radius: 2px; font: 700 .73rem var(--sans); letter-spacing: .12em; text-transform: uppercase; transition: background .2s ease, transform .2s ease; }
+      .button:hover, .button:focus-visible { background: #e6c987; transform: translateY(-2px); }
       section { padding: 96px 0; }
       .section-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 42px; }
       .section-head h2 { margin: 10px 0 0; font-size: clamp(2.4rem, 5vw, 4.1rem); letter-spacing: -.04em; }
@@ -84,19 +67,36 @@
       .gallery figcaption { padding: 10px 6px 2px; color: var(--muted); font-family: var(--serif); font-size: .95rem; }
       .music { color: var(--paper); background: var(--brown); }
       .music .section-head p { color: rgba(252,249,242,.72); }
-      .music .eyebrow { color: var(--gold); }
+      .music .eyebrow, .licensing .eyebrow { color: var(--gold); }
       .releases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
       .release { overflow: hidden; background: #49362b; border: 1px solid rgba(215,173,104,.22); }
       .release img { width: 100%; aspect-ratio: 1; object-fit: cover; }
       .release-copy { padding: 17px; }
       .release h3 { margin: 0 0 6px; color: var(--paper); font-size: 1.22rem; }
       .release p { margin: 0; color: rgba(252,249,242,.72); font-size: .86rem; }
+      .link-group { margin-top: 38px; }
+      .link-group h3 { margin: 0 0 15px; color: var(--paper); font-size: 1.35rem; }
+      .link-row { display: flex; flex-wrap: wrap; gap: 11px; }
+      .link-button { display: inline-flex; align-items: center; justify-content: center; min-height: 43px; padding: 10px 16px; border: 1px solid rgba(215,173,104,.48); color: var(--paper); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: color .2s ease, background .2s ease; }
+      .link-button:hover, .link-button:focus-visible { color: var(--ink); background: var(--gold); }
+      .licensing { background: var(--cream); }
+      .licensing-box { max-width: 900px; padding: clamp(26px, 5vw, 48px); background: var(--brown); color: var(--paper); }
+      .licensing-box h2 { margin: 10px 0 16px; color: var(--paper); font-size: clamp(2.2rem, 4vw, 3.3rem); }
+      .licensing-box > p { max-width: 720px; color: rgba(252,249,242,.78); }
+      .licensing-box h3 { margin: 30px 0 12px; color: var(--gold); font-size: 1.35rem; }
+      .licensing-list { margin: 0; padding-left: 20px; color: rgba(252,249,242,.84); }
+      .licensing-list li { padding: 5px 0 5px 4px; }
+      .licensing-email { margin-top: 22px; padding: 16px 18px; border-left: 3px solid var(--gold); background: rgba(255,255,255,.06); color: rgba(252,249,242,.84); }
+      .licensing-email a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
       .contact { background: #e8dfd0; }
       .contact-box { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
       .contact-box h2 { margin: 8px 0; font-size: clamp(2.5rem, 5vw, 4rem); }
       .contact-box p { max-width: 520px; margin: 0; color: var(--muted); }
       .contact .button { margin: 0; background: var(--clay); color: #fffaf1; }
       .contact .button:hover { background: #7f3f2d; }
+      .social-links { margin-top: 24px; }
+      .social-links .link-button { color: var(--brown); border-color: rgba(58,42,34,.3); }
+      .social-links .link-button:hover, .social-links .link-button:focus-visible { color: #fffaf1; background: var(--clay); }
       footer { padding: 25px 0; color: rgba(252,249,242,.7); background: var(--ink); font-size: .8rem; }
       .footer { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
       @media (max-width: 850px) {
@@ -131,6 +131,7 @@
           <a href="#story">Our story</a>
           <a href="#artist">The artist</a>
           <a href="#music">Music</a>
+          <a href="#licensing">Licensing</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -203,17 +204,57 @@
             <article class="release"><img src="MUSICIANS%20OF%20CHRIST%20(3).png" alt="The Lord Is My Light and Salvation cover art" /><div class="release-copy"><h3>The Lord Is My Light and Salvation</h3><p>A reflective song of comfort and trust.</p></div></article>
             <article class="release"><img src="MUSICIANS%20OF%20CHRIST%20(4).png" alt="Let Everything That Has Breath cover art" /><div class="release-copy"><h3>Let Everything That Has Breath</h3><p>An invitation to bring your whole heart to worship.</p></div></article>
           </div>
+          <div class="link-group">
+            <h3>Listen to the music</h3>
+            <div class="link-row" aria-label="Streaming platform links">
+              <a class="link-button" href="https://youtube.com/@musiciansofchrist?si=_sD5IPR_n23OqHjh" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+              <a class="link-button" href="https://open.spotify.com/artist/0jw9zE0t7ainHF25Cd4cJQ?si=vU6ICU8NQmC7GLUNqmNKFw" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <a class="link-button" href="https://music.apple.com/us/artist/musicians-of-christ/1533139502" target="_blank" rel="noopener noreferrer">Apple Music</a>
+              <a class="link-button" href="https://music.amazon.com/artists/B08JYG55LZ/musicians-of-christ?marketplaceId=ATVPDKIKX0DER&amp;musicTerritory=US&amp;ref=dm_sh_Pa6mTkVMwK7mzwskVo2yd2DQK" target="_blank" rel="noopener noreferrer">Amazon Music</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="licensing" id="licensing">
+        <div class="wrap">
+          <div class="licensing-box">
+            <div class="eyebrow">Music for your project</div>
+            <h2>Licensing inquiries</h2>
+            <p>Interested in using a Musicians of Christ song in a film, documentary, advertisement, or another project? Email the details below so I can understand what you have in mind and respond with the next steps.</p>
+            <h3>What to include in your email</h3>
+            <ul class="licensing-list">
+              <li><strong>Project type:</strong> Commercial, independent film, documentary, social media promo, or another format.</li>
+              <li><strong>Track title(s):</strong> Name the song or instrumental you’re interested in.</li>
+              <li><strong>Use and territory:</strong> Explain where and how the music will be used, and the intended territory (for example, worldwide web or regional television).</li>
+              <li><strong>Project budget:</strong> Share your estimated music-licensing budget.</li>
+              <li><strong>Timing:</strong> Include any important production or release deadlines.</li>
+            </ul>
+            <div class="licensing-email">Send licensing inquiries to <a href="mailto:musiciansofchrist@yahoo.com">musiciansofchrist@yahoo.com</a>.</div>
+          </div>
         </div>
       </section>
 
       <section class="contact" id="contact">
-        <div class="wrap contact-box">
-          <div>
-            <div class="eyebrow">Keep in touch</div>
-            <h2>Let’s talk music.</h2>
-            <p>For bookings, collaborations, or licensing questions, send me a note. I’d be glad to hear about your project.</p>
+        <div class="wrap">
+          <div class="contact-box">
+            <div>
+              <div class="eyebrow">Keep in touch</div>
+              <h2>Let’s talk music.</h2>
+              <p>For bookings, collaborations, or general questions, send me a note. I’d be glad to hear about your project.</p>
+            </div>
+            <a class="button" href="mailto:musiciansofchrist@yahoo.com">Email Jena</a>
           </div>
-          <a class="button" href="mailto:musiciansofchrist@yahoo.com">Email Jena</a>
+          <div class="social-links">
+            <div class="eyebrow">Follow along</div>
+            <div class="link-row" aria-label="Social media links">
+              <a class="link-button" href="https://www.instagram.com/musiciansofchrist_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="link-button" href="https://www.facebook.com/share/1P9xunk7Rc/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a class="link-button" href="https://www.tiktok.com/@musiciansofchrist?_r=1&amp;_t=ZPL-97R0mZYLt4p" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a class="link-button" href="https://www.linkedin.com/company/musicians-of-christ/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="link-button" href="https://youtube.com/@musiciansofchrist?si=_sD5IPR_n23OqHjh" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
